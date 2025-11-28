@@ -11,18 +11,16 @@ public class BaseTests {
     protected HomePage homePage;
     @BeforeClass
     public void setUp(){
-        System.setProperty("webdriver.chromedriver.driver","resource/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","resource/chromedriver.exe");
         driver = new ChromeDriver();
-        driver.get("https://the-internet.herokuapp.com/");
+        driver.get("https://bonigarcia.dev/selenium-webdriver-java/");
         homePage = new HomePage(driver);
+
 
     }
     @AfterClass
     public void tearDown(){
         driver.quit();
     }
-    public static void main(String[]args){
-        BaseTests tests = new BaseTests();
-        tests.setUp();
-    }
+
 }
