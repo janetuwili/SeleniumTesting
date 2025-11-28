@@ -21,6 +21,17 @@ public class HomePage {
         clickLink("Infinite scroll");
         return new InfiniteScrollPage(driver);
     }
+    public DropDownPage clickDropDownMenu(){
+        clickLink("Dropdown menu");
+        return new DropDownPage(driver);
+
+
+    }
+    public MouseOverPage clickMouseOver(){
+        clickLink("Mouse over");
+        return new MouseOverPage(driver);
+
+    }
     private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
 
