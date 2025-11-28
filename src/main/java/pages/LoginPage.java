@@ -13,10 +13,10 @@ public class LoginPage {
 
     }
     public void setUsername(String username){
-        driver.findElement(usernameField).sendKeys();
+        driver.findElement(usernameField).sendKeys(username);
     }
     public void setPassword(String password){
-        driver.findElement(passwordField).sendKeys();
+        driver.findElement(passwordField).sendKeys(password);
 
     }
     public SecureAreaPage clickLogin(){
